@@ -4,27 +4,27 @@ public class Guest {
     Scanner scan = new Scanner(System.in);
     protected String name;
     protected int age;
+    protected int phoneNr;
     protected Room room;
 
-    protected Guest(String name, int age, Room room){
-        this.name = name;
-        this.age = age;
-        this.room = room;
+    public Guest(String name, int age, int phoneNr, Room room){
+        createGuest();
     }
 
-    protected void addRoom(){
-        System.out.println("What type of room do you want to book?");
-        System.out.println("1. Regular Room /" +
-                "2. VIP Room");
-        int roomOption = scan.nextInt();
-        System.out.println("You have chosen option nr. " +roomOption);
-        if(roomOption == 1){
-            this.room = new RegularRoom(113, 1234, true, room.guest);
-        } else if (roomOption == 2) {
-            this.room = new VipRoom(5, 2356, true, room.guest);
-        }
+    protected void createGuest(){
+        System.out.println("Enter name: ");
+        this.name = scan.nextLine();
+        System.out.println("Enter age: ");
+        this.age = scan.nextInt();
+        System.out.println("Enter phoneNr");
+        this.phoneNr = scan.nextInt();
+        System.out.println("Your name is: " +name + "\n" +
+                "Your age is: " +age +"\n" +
+                "Your phone number is: " +phoneNr);
     }
 
-    protected void seeBooking(String name, int roomNr){
+    protected void addHotel(){
+        System.out.println("Enter hotel: ");
+
     }
 }
