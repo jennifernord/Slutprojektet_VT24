@@ -7,7 +7,7 @@ public class Guest {
     protected int phoneNr;
     protected Room room;
 
-    public Guest(String name, int age, int phoneNr, Room room){
+    public Guest(){
         createGuest();
     }
 
@@ -23,8 +23,8 @@ public class Guest {
                 "Your phone number is: " +phoneNr);
     }
 
-    protected void addHotel(){
-        System.out.println("Enter hotel: ");
+    protected void addCity(){
+        System.out.println("Enter city you want to book hotel in: ");
 
     }
 }

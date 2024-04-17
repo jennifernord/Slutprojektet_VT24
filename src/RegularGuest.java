@@ -1,6 +1,3 @@
-public class RegularGuest extends Guest{
+public class RegularGuest{
 
-    protected RegularGuest(String name, int age, Room room) {
-        super(name, age, room);
-    }
 }

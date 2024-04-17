@@ -1,6 +1,3 @@
-public class RegularRoom extends Room{
+public class RegularRoom{
 
-    protected RegularRoom(int roomNr, int roomPin, boolean cleanlinessStatus, Guest guest) {
-        super(roomNr, roomPin, cleanlinessStatus, guest);
-    }
 }

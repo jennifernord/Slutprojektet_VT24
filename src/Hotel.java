@@ -7,4 +7,5 @@ public class Hotel {
         this.city = city;
     }
 
+
 }
