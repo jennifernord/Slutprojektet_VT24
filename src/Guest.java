@@ -1,30 +1,17 @@
 import java.util.Scanner;
 
-public class Guest {
-    Scanner scan = new Scanner(System.in);
+public abstract class Guest {
     protected String name;
     protected int age;
     protected int phoneNr;
     protected Room room;
 
-    public Guest(){
-        createGuest();
+    public Guest(String name, int age, int phoneNr, Room room){
+        this.name = name;
+        this.age = age;
+        this.phoneNr = phoneNr;
+        this.room = room;
     }
 
-    protected void createGuest(){
-        System.out.println("Enter name: ");
-        this.name = scan.nextLine();
-        System.out.println("Enter age: ");
-        this.age = scan.nextInt();
-        System.out.println("Enter phoneNr");
-        this.phoneNr = scan.nextInt();
-        System.out.println("Your name is: " +name + "\n" +
-                "Your age is: " +age +"\n" +
-                "Your phone number is: " +phoneNr);
-    }
-
-    protected void addCity(){
-        System.out.println("Enter city you want to book hotel in: ");
-
-    }
+    protected void addRoom(){}
 }
