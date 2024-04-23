@@ -1,9 +1,12 @@
-public class City {
-    String country;
-    String name;
+import java.util.ArrayList;
 
-    City(String country, String name){
-        this.country = country;
+public class City {
+    String name;
+    Hotel hotel;
+
+    City(String name, Hotel hotel){
         this.name = name;
+        this.hotel = hotel;
     }
+
 }

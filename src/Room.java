@@ -1,7 +1,10 @@
 public abstract class Room {
-    protected int roomNr;
+    protected int beds;
     protected Hotel hotel;
 
-    protected Room(int roomNr, Hotel hotel){
+    protected Room(int beds, Hotel hotel){
+    }
+
+    protected void addHotel(){
     }
 }

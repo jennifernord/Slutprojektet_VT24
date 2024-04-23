@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public abstract class Guest {
     protected String name;
@@ -6,12 +6,12 @@ public abstract class Guest {
     protected int phoneNr;
     protected Room room;
 
-    public Guest(String name, int age, int phoneNr, Room room){
+    public Guest(String name, int age, int phoneNr){
         this.name = name;
         this.age = age;
         this.phoneNr = phoneNr;
-        this.room = room;
     }
 
     protected void addRoom(){}
+
 }

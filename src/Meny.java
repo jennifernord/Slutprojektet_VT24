@@ -4,11 +4,10 @@ import java.util.Scanner;
 public class Meny {
     public Meny(){MenuStart();}
     Scanner scan = new Scanner(System.in);
-    private void MenuStart(){
+    public void MenuStart(){
         //Skapar listor på hotell och städer
         ArrayList<Hotel> hotelList = new ArrayList<>();
         ArrayList<City> cityList = new ArrayList<>();
-        ArrayList<RegularRoom> regularRooms = new ArrayList<>();
 
         //Skapar olika städer och hotell
         cityList.add(new City("Sweden", "Stockholm"));
@@ -18,13 +17,6 @@ public class Meny {
         hotelList.add(new Hotel("Grand Hotel", cityList.get(0)));
         hotelList.add(new Hotel("Hotel Royal", cityList.get(1)));
         hotelList.add(new Hotel("Vejby Strand Hotel", cityList.get(2)));
-
-        regularRooms.add(new RegularRoom(1, hotelList.get(0)));
-        regularRooms.add(new RegularRoom(2, hotelList.get(0)));
-        regularRooms.add(new RegularRoom(1, hotelList.get(1)));
-        regularRooms.add(new RegularRoom(2, hotelList.get(1)));
-        regularRooms.add(new RegularRoom(1, hotelList.get(2)));
-        regularRooms.add(new RegularRoom(2, hotelList.get(2)));
 
         System.out.println("1. Create booking\n" +
                 "2. See available hotels\n" +
