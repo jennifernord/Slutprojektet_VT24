@@ -14,9 +14,8 @@ public class RegularGuest extends Guest{
         if (option == 1){
             System.out.println("Enter number of beds needed: ");
             int beds = scan.nextInt();
-            this.room = new RegularRoom(beds);
+            this.room = new RegularRoom(beds,);
             System.out.println("You have booked a room with " +beds +" beds");
         }
-
     }
 }

@@ -5,29 +5,32 @@ public class Meny {
     public Meny(){MenuStart();}
     Scanner scan = new Scanner(System.in);
 
-    ArrayList<Guest> bookings = new ArrayList<>();
+    ArrayList<RegularGuest> bookings = new ArrayList<>();
     private void MenuStart(){
-        System.out.println("1. Create booking\n" +
-                "2. See all bookings\n" +
-                "3. ...\n" +
-                "Enter option: ");
-        int option = scan.nextInt();
-        if (option == 1){
-            System.out.println("1. Regular guest\n" +
-                    "2. VIP guest\n" +
-                    "Choose type of guest: ");
-            int typeGuest = scan.nextInt();
-            if (typeGuest == 1){
-                newGuest();
+        while(true){
+            System.out.println("1. Create booking\n" +
+                    "2. See all bookings\n" +
+                    "3. ...\n" +
+                    "Enter option: ");
+            int option = scan.nextInt();
+            if (option == 1) {
+                System.out.println("1. Regular guest\n" +
+                        "2. VIP guest\n" +
+                        "Choose type of guest: ");
+                int typeGuest = scan.nextInt();
+                if (typeGuest == 1) {
+                    newGuest();
+                }
+                if (typeGuest == 2) {
+                    newVipGuest();
+                }
             }
-            if (typeGuest == 2){
-                newVipGuest();
+            if (option == 2) {
+                for (RegularGuest guest : bookings) {
+                    System.out.println(guest.name + " has phone number " + guest.phoneNr);
+                }
             }
         }
-        if (option == 2){
-            for (Guest booking : bookings){
-            }
-            }
         }
 
     private void newGuest() {
