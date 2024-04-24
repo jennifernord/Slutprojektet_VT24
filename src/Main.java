@@ -1,5 +1,4 @@
-import java.awt.*;
-
+//Startar hela programmet
 public class Main {
     public static void main(String[] args) {
         new Meny();

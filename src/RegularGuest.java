@@ -1,11 +1,14 @@
-import java.util.ArrayList;
+//Klass som skapar en vanlig gäst
 import java.util.Scanner;
 public class RegularGuest extends Guest{
     Scanner scan = new Scanner(System.in);
+
+    //Vanliga gästens attribut
     protected RegularGuest(String name, int age, int phoneNr){
         super(name, age, phoneNr);
     }
 
+    //Metod där den vanliga gästen kan äga ett rum
     protected void addRoom(){
         System.out.println("Enter hotel you want to book the room in: ");
         String hotelName = scan.nextLine();

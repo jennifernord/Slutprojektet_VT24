@@ -1,11 +1,14 @@
+//Klass som skapar VIP gäst
 public class VipGuest extends RegularGuest{
 
     int privilege;
 
+    //VIP gästens attribut
     protected VipGuest(String name, int age, int phoneNr) {
         super(name, age, phoneNr);
     }
 
+    //Metod där VIP gästen kan äga ett rum
     protected void addRoom(){
         System.out.println("Enter hotel you want to book the room in: ");
         String hotelName = scan.nextLine();
