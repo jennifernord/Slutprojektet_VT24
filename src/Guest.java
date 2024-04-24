@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public abstract class Guest {
     protected String name;
     protected int age;
@@ -13,5 +11,4 @@ public abstract class Guest {
     }
 
     protected void addRoom(){}
-
 }

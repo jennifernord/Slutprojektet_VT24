@@ -6,7 +6,4 @@ public abstract class Room {
         this.beds = beds;
         this.hotel = hotel;
     }
-
-    protected void addHotel(){
-    }
 }

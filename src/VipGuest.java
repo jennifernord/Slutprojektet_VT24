@@ -7,6 +7,9 @@ public class VipGuest extends RegularGuest{
     }
 
     protected void addRoom(){
+        System.out.println("Enter hotel you want to book the room in: ");
+        String hotelName = scan.nextLine();
+        Hotel hotel = new Hotel(hotelName);
         System.out.println("Enter number of beds needed: ");
         int beds = scan.nextInt();
 
@@ -18,7 +21,7 @@ public class VipGuest extends RegularGuest{
         int privilege = scan.nextInt();
         System.out.println("You have chosen option " +privilege);
 
-        this.room = new VipRoom(beds, privilege);
+        this.room = new VipRoom(beds, hotel, privilege);
         System.out.println("You have booked a room with " +beds +" beds and privilege nr " +privilege);
     }
 }
