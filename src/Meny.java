@@ -1,4 +1,4 @@
-//Låter användaren ta del av programmets funktioner
+//Klassen låter användaren ta del av programmets funktioner
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -13,6 +13,7 @@ public class Meny {
         menyOption();
     }
 
+    //Låter användaren interagera med menyn
     private void menyOption() {
         while (true) {
             try {
@@ -26,17 +27,18 @@ public class Meny {
                 } else if (option == 2) {
                     menyOption2();
                 } else if (option == 3) {
+                    System.out.println("Have a nice day!");
                     break;
                 }
             } catch (Exception e) {
                 scan.nextLine();
-                System.out.println("meny Option error");
                 System.out.println("Please try again, only option '1' or '2' is available\n" +
                         "Only enter option with numbers: ");
             }
         }
     }
 
+    //Skapa en ny bokning
     private void menyOption1() {
         while (true) {
             try {
@@ -53,17 +55,20 @@ public class Meny {
                 }
             } catch (Exception e) {
                 scan.next();
-                System.out.println("Error guesttype");
+                System.out.println("Error, please try again\n" +
+                        "Only option '1' and '2' is available, enter option with numbers only");
             }
         }
     }
 
+    //Se alla tidigare bokningar
     private void menyOption2() {
         for (RegularGuest guest : bookings) {
             System.out.println(guest.name + " has phone number " + guest.phoneNr);
         }
     }
 
+    //Skapar en "regular" gäst
     private void newGuest() {
         while (true) {
             try {
@@ -90,6 +95,7 @@ public class Meny {
         }
     }
 
+    //Skapar en "VIP" gäst
     private void newVipGuest() {
         while (true) {
             try {

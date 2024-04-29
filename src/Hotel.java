@@ -2,7 +2,8 @@
 public class Hotel {
     String hotelName;
 
-    Hotel(String hotelName){
+    //Konstruktor
+    Hotel(String hotelName) {
         this.hotelName = hotelName;
     }
 }

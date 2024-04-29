@@ -1,20 +1,21 @@
-//Klass som skapar en vanlig gäst
+//Klass som skapar en "Regular" gäst
 
 import java.util.Scanner;
 
 public class RegularGuest extends Guest {
     Scanner scan = new Scanner(System.in);
 
-    //Vanliga gästens attribut
+    //Konstruktor
     protected RegularGuest(String name, int age, int phoneNr) {
         super(name, age, phoneNr);
     }
 
-    //Metod där den vanliga gästen kan äga ett rum
+    //Ger gästen ett rum
     protected void addRoom() {
         chooseRoom();
     }
 
+    //Gästen väljer typ av rum
     private void chooseRoom() {
         while (true) {
             System.out.println("1. Regular Room\n" +
@@ -37,6 +38,7 @@ public class RegularGuest extends Guest {
         }
     }
 
+    //Skapar ett "Regular" rum till gästen
     private void roomOption1() {
         while (true) {
             System.out.println("Enter hotel you want to book the room in: ");
@@ -56,6 +58,7 @@ public class RegularGuest extends Guest {
         }
     }
 
+    //Skapar ett "VIP" rum till gästen
     private void roomOption2() {
         while (true) {
             try {
@@ -75,8 +78,10 @@ public class RegularGuest extends Guest {
                 this.room = new VipRoom(beds, hotel, privilege);
                 System.out.println("You have booked a room with " + beds + " beds and privilege nr " + privilege);
                 break;
-            }catch (Exception e) {
-            System.out.println("VIP beds error");
-            System.out.println("Error, please try again. Only enter number of beds with numbers.");
+            } catch (Exception e) {
+                System.out.println("VIP beds error");
+                System.out.println("Error, please try again. Only enter number of beds with numbers.");
+            }
         }
+    }
 }
